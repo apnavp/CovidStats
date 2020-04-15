@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <link rel= "stylesheet" type= "text/css" href="{{url_for('static',filename='main.css')}}">
+    <meta charset="utf-8">
+    <title>Corona stats</title>
+
+  </head>
+  <body>
+	<p> This is a website to track corona updates</p>
+	  <section>
+	  <form action="/citySearch" method="POST">
+  	  <label for="cName">City Name:</label>
+  	  <input type="text" id="cName" name="cName"><br><br>
+       <input type="submit" value="Submit">
+</form>
+
+	  </section>
+  <section>
+	  <form action="/countrySearch" method="POST">
+  	  <label for="cName">Country Name:</label>
+  	  <input type="text" id="coName" name="coName"><br><br>
+       <input type="submit" value="Submit">
+</form>
+	  </section>
+  </body>
+</html>

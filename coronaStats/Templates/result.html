@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+<ul>
+{% for item in data %}
+    <li>City name:{{item[0]}}</li>
+    <li>Province name:{{item[1]}}</li>
+     <li>Country:{{item[2]}}</li>
+     <li>Confirmed:{{item[3]}}</li>
+     <li>Deaths:{{item[4]}}</li>
+    <li>Recovered:{{item[5]}}</li>
+    <br><br>
+{% endfor %}
+</ul>
+</body>
+</html>
