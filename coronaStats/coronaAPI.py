@@ -77,7 +77,7 @@ def apiCalls1(cName):
 @app.route("/")
 def Homepage():
     print(request.method)
-    return app.send_static_file("index.html")
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
