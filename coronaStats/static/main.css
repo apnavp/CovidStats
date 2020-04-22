@@ -1,1 +1,91 @@
-body {background-color: coral;}
+body {
+  background-color: #DDDDDD;
+  font-family: times Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+  font: 20px
+}
+.btn, .btn:link, .btn:visited {
+  border-radius: 0.25em;
+  border-style: solid;
+  border-width: 1px;
+  color: #111;
+  display: inline-block;
+  font-family: avenir, helvetica, roboto, arial, sans-serif;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: color 0.4s, background-color 0.4s, border 0.4s;
+  transition: color 0.4s, background-color 0.4s, border 0.4s;
+}
+.btn:hover, .btn:focus {
+  color: black;
+  border: 1px solid #7FDBblackFF;
+  -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+.btn:active {
+  color: #0074D9;
+  border: 1px solid #0074D9;
+  -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+.btn--l {
+  font-size: 20px;
+  border-radius: 0.25em !important;
+}
+.div_class {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+.div_space {
+  margin: 20px;
+  padding: 24px;
+  border-style: dashed;
+}
+.select-style {
+  border: 1px solid #ccc;
+  width: 120px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+}
+.select-style select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+.select-style select:focus {
+  outline: none;
+}
+.select:hover::after {
+  color: #F39C12;
+}
+
+li{
+    flex-direction: column;
+    display:inline;
+    justify-content: space-between;
+}
+
+footer{
+	color:#DDDDDD;
+	background: black;
+	position: fixed;
+	left: 0;
+    bottom: 0;
+    width: 100%;
+	text-align: left;
+}
+
+.ul_result{
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+
+}

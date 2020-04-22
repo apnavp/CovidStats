@@ -7,21 +7,58 @@
 
   </head>
   <body>
-	<p> This is a website to track corona updates</p>
-	  <section>
-	  <form action="/citySearch" method="POST">
-  	  <label for="cName">City Name:</label>
-  	  <input type="text" id="cName" name="cName"><br><br>
-       <input type="submit" value="Submit">
-</form>
+	<h1>  <p> Covid-19 Tracker</p></h1>
+<div class="div_class">
+  <div class="div_space">
+    <form action="/citySearch" method="POST" >
+      <label id="cName">Search By US City</label>
+      <br>
+      <br>
+      <select class="select-style required" name="cName" required>
+        <option name="none" value="" selected disabled>Select City</option>
 
-	  </section>
-  <section>
-	  <form action="/countrySearch" method="POST">
-  	  <label for="cName">Country Name:</label>
-  	  <input type="text" id="coName" name="coName"><br><br>
-       <input type="submit" value="Submit">
-</form>
-	  </section>
-  </body>
+              {% for item in data1 %}
+
+        <option name="{{ item }}" >{{ item }} </option>
+
+         {% endfor %}
+
+      </select>
+      <br>
+      <br>
+      <input type="submit" value="Submit" class="btn btn--m">
+    </form>
+  </div>
+  <div class="div_space">
+    <form action="/countrySearch" method="POST">
+      <label id="coName">Search By Country</label>
+      <br>
+      <br>
+      <select class="select-style" name="coName" required>
+        <option name="none"  value="" selected disabled>Select Country</option>
+
+              {% for item in data2 %}
+
+        <option name="{{ item }}" >{{ item }} </option>
+
+         {% endfor %}
+
+      </select>
+      <br>
+      <br>
+      <input type="submit" value="Submit" class="btn btn--m">
+    </form>
+  </div>
+</div>
+
+	<footer>
+  <nav>
+    <ul>
+      <li class="footer_nav_li"> ©Apnav Poptani-Covid Tracker</li>
+      <li class="footer_nav_li"><a href="#">About </a></li>
+      <li class="footer_nav_li"><a href="#">Contact </a></li>
+    </ul>
+  </nav>
+	</footer>
+</body>
 </html>
