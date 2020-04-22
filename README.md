@@ -1,7 +1,7 @@
 # CovidStats
 Search covid cases by city name or country name
 
-Backend- Python 
+Backend- Python \
 Frontend- Flask, HTML5 and CSS 
 
 API:https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats
