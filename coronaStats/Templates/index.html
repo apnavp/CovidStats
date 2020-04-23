@@ -29,6 +29,23 @@
       <input type="submit" value="Submit" class="btn btn--m">
     </form>
   </div>
+    <div class="div_space">
+    <form action="/provinceSearch" method="POST" >
+      <label id="pName">Search By US State</label>
+      <br>
+      <br>
+      <select class="select-style required" name="pName" required>
+        <option name="none" value="" selected disabled>Select City</option>
+              {% for item in data3 %}
+        <option name="{{ item }}" >{{ item }} </option>
+         {% endfor %}
+
+      </select>
+      <br>
+      <br>
+      <input type="submit" value="Submit" class="btn btn--m">
+    </form>
+  </div>
   <div class="div_space">
     <form action="/countrySearch" method="POST">
       <label id="coName">Search By Country</label>

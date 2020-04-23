@@ -28,6 +28,8 @@ def unique(list1):
     return unique_list
 
 
+# search by city
+
 @app.route("/citySearch", methods=['POST'])
 def Home():
     print(request.method)
@@ -47,6 +49,30 @@ def apiCalls_city(cName):
             print(dataset)
     return dataset
 
+
+# search by province
+
+@app.route("/provinceSearch", methods=['POST'])
+def Home_province():
+    print(request.method)
+    pName = request.form['pName']
+    data = apiCalls_province(pName)
+    print(pName)
+    return render_template('result.html', data=data)
+
+
+def apiCalls_province(pName):
+    x = rapidAPI()
+    dataset = []
+    for k in x['data']['covid19Stats']:
+        if k['province'] == pName:
+            data = [(k['city']), k['province'], print(k['country']), k['confirmed'], k['deaths'], k['recovered']]
+            dataset.append(data)
+            print(dataset)
+    return dataset
+
+
+# search by country
 
 @app.route("/countrySearch", methods=['POST'])
 def Home1():
@@ -69,12 +95,12 @@ def apiCalls_country(cName):
     return dataset
 
 
-
 @app.route("/")
 def Homepage():
     data1 = unique_city()
     data2 = unique_country()
-    return render_template("index.html", data1=data1, data2=data2)
+    data3 = unique_province()
+    return render_template("index.html", data1=data1, data2=data2, data3=data3)
 
 
 def unique_city():
@@ -85,9 +111,9 @@ def unique_city():
     for k in x['data']['covid19Stats']:
         data = k['city']
         dataset.append(data)
-    print("this is index dataset", dataset)
+    # print("this is index dataset", dataset)
     x = unique(dataset)
-    print("this is inside apicalls", x)
+    print("city", x)
     return x
 
 
@@ -102,5 +128,16 @@ def unique_country():
     return x
 
 
+def unique_province():
+    x = rapidAPI()
+    # check for response status code as 200 then put forward
+    dataset = []
+    for k in x['data']['covid19Stats']:
+        data = k['province']
+        dataset.append(data)
+    x = unique(dataset)
+    return x
+
+
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8083, debug=True)
+    app.run(host='127.0.0.1', port=8087, debug=True)

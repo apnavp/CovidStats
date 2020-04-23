@@ -49,7 +49,6 @@ body {
   width: 120px;
   border-radius: 3px;
   overflow: hidden;
-  background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
 }
 .select-style select {
   padding: 5px 8px;
@@ -86,6 +85,14 @@ footer{
 .ul_result{
     flex-direction: column;
     display:flex;
-    align-items: center;
+    align-items: left;
 
+}
+
+.li_death{
+color:red;
+}
+
+.li_recovered{
+color:green;
 }
