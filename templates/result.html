@@ -9,9 +9,15 @@
 <h1><p> Covid-19 Tracker</p></h1>
 <ul class="ul_result">
 {% for item in data %}
+    {% if item[0] %}
     <li>City : {{item[0]}}</li>
+    {% endif %}
+    {% if item[1] %}
     <li>Province : {{item[1]}}</li>
+    {% endif %}
+    {% if item[2] %}
     <li>Country: {{item[2]}}</li>
+     {% endif %}
      <li>Confirmed : {{item[3]}}</li>
      <li class="li_death">Deaths : {{item[4]}}</li>
     <li class="li_recovered">Recovered : {{item[5]}}</li>
