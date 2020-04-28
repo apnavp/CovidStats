@@ -17,3 +17,4 @@ pytz==2013.7
 six==1.12.0
 Flask==1.0.2
 gunicorn==20.0.4
+requests
