@@ -31,8 +31,8 @@ body {
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
-.btn--l {
-  font-size: 20px;
+.btn--s {
+  font-size: 12px;
   border-radius: 0.25em !important;
 }
 
