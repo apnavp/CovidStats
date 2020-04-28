@@ -1,3 +1,6 @@
+Flask==1.0.2
+gunicorn==20.0.4
+requests
 altgraph==0.10.2
 asn1crypto==0.24.0
 bdist-mpkg==0.5.0
@@ -15,6 +18,3 @@ pyparsing==2.0.1
 python-dateutil==1.5
 pytz==2013.7
 six==1.12.0
-Flask==1.0.2
-gunicorn==20.0.4
-requests
