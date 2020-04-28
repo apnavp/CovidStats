@@ -43,12 +43,14 @@ body {
   margin: 20px;
   padding: 24px;
   border-style: dashed;
+  	overflow: auto;
 }
 .select-style {
   border: 1px solid #ccc;
   width: 120px;
   border-radius: 3px;
   overflow: hidden;
+
 }
 .select-style select {
   padding: 5px 8px;
@@ -96,3 +98,9 @@ color:red;
 .li_recovered{
 color:green;
 }
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  div, footer, .div_class ,body {
+    width:100%;
+  }
