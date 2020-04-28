@@ -2,14 +2,18 @@
 <html lang="en" dir="ltr">
   <head>
       <link rel= "stylesheet" type= "text/css" href="{{url_for('static',filename='main.css')}}">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="utf-8">
     <title>Corona stats</title>
 
   </head>
   <body>
+    <div class="w3-container w3-grey">
 	<h1>  <p> Covid-19 Tracker</p></h1>
-<div class="div_class">
-  <div class="div_space">
+        </div>
+<div class="w3-row-padding">
+  <div class="div_space w3-third w3-container">
     <form action="/citySearch" method="POST" >
       <label id="cName">Search By US City</label>
       <br>
@@ -28,7 +32,7 @@
       <input type="submit" value="Submit" class="btn btn--m">
     </form>
   </div>
-    <div class="div_space">
+    <div class="div_space w3-third w3-container">
     <form action="/provinceSearch" method="POST" >
       <label id="pName">Search By US State</label>
       <br>
@@ -45,7 +49,7 @@
       <input type="submit" value="Submit" class="btn btn--m">
     </form>
   </div>
-  <div class="div_space">
+  <div class="div_space w3-third w3-container">
     <form action="/countrySearch" method="POST">
       <label id="coName">Search By Country</label>
       <br>

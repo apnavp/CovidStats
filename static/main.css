@@ -41,7 +41,7 @@ body {
   align-items: center;
 }
 .div_space {
-  margin: 20px;
+  margin: 1% 0% 1% 1%;
   padding: 24px;
   border-style: dashed;
   	overflow: auto;
@@ -99,9 +99,3 @@ color:red;
 .li_recovered{
 color:green;
 }
-
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  div, footer, .div_class ,body {
-    width:100%;
-  }
