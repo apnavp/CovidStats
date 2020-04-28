@@ -19,7 +19,7 @@ body {
   transition: color 0.4s, background-color 0.4s, border 0.4s;
 }
 .btn:hover, .btn:focus {
-  color: #0074D9;
+  color:#0074D9 ;
   border: 1px solid #7FDBblackFF;
   -webkit-transition: background-color 0.3s, color 0.3s, border 0.3s;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
