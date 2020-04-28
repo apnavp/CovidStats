@@ -35,11 +35,7 @@ body {
   font-size: 20px;
   border-radius: 0.25em !important;
 }
-.div_class {
-  flex-direction: row;
-  display: flex;
-  align-items: center;
-}
+
 .div_space {
   margin: 1% 0% 1% 1%;
   padding: 24px;
