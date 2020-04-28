@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
      <link rel= "stylesheet" type= "text/css" href="{{url_for('static',filename='main.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="UTF-8">
     <title>Result</title>
 </head>
 <body>
-<h1><p> Covid-19 Tracker</p></h1>
-<ul class="ul_result">
+<div class="w3-container w3-grey">
+	<h1>  <p> Covid-19 Tracker</p></h1>
+        </div>
+<div class="w3-container">
+<ul class="ul_result w3-card-4">
 {% for item in data %}
     {% if item[0] %}
     <li>City : {{item[0]}}</li>
@@ -21,9 +26,11 @@
      <li>Confirmed : {{item[3]}}</li>
      <li class="li_death">Deaths : {{item[4]}}</li>
     <li class="li_recovered">Recovered : {{item[5]}}</li>
-    <br><br>
+    <br>
+    <div class="w3-bottombar w3-border-black"></div><br>
 {% endfor %}
 </ul>
+    </div>
 <footer>
   <nav>
     <ul>

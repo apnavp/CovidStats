@@ -48,7 +48,6 @@ body {
 }
 .select-style {
   border: 1px solid #ccc;
-  width: 120px;
   border-radius: 3px;
   overflow: hidden;
 
