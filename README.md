@@ -5,6 +5,7 @@ Search covid cases by city name or country name
 Backend- Python, Flask \
 Frontend- HTML5 and CSS 
 
+live demo of application can be found at: https://covid-trackr.herokuapp.com
 
 API:https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats
 
