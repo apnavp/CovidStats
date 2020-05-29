@@ -11,7 +11,7 @@ def rapidAPI(coName="US"):
     querystring = {"country": coName}
     headers = {
         'x-rapidapi-host': "covid-19-coronavirus-statistics.p.rapidapi.com",
-        'x-rapidapi-key': os.environ.get('KEY')
+        'x-rapidapi-key': "7c844068f9msh8dbaa7c1f7887b5p1e7196jsn8a07f1641cc7"
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     x = response.json()
