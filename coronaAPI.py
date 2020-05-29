@@ -1,8 +1,9 @@
 import logging
 import requests
+import os
 from flask import Flask, request, render_template
 
-app = Flask(__name__)
+app = Flask("COVID-19 Tracker")
 
 
 def rapidAPI(coName="US"):
@@ -10,7 +11,7 @@ def rapidAPI(coName="US"):
     querystring = {"country": coName}
     headers = {
         'x-rapidapi-host': "covid-19-coronavirus-statistics.p.rapidapi.com",
-        'x-rapidapi-key': process.env.KEY
+        'x-rapidapi-key': os.environ.get('KEY')
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     x = response.json()
@@ -44,7 +45,7 @@ def apiCalls_city(cName):
     dataset = []
     for k in x['data']['covid19Stats']:
         if k['city'] == cName:
-            data = [(k['city']), k['province'], print(k['country']), k['confirmed'], k['deaths'], k['recovered']]
+            data = [(k['city']), k['province'], (k['country']), k['confirmed'], k['deaths'], k['recovered']]
             dataset.append(data)
             print(dataset)
     return dataset
@@ -66,14 +67,13 @@ def apiCalls_province(pName):
     dataset = []
     for k in x['data']['covid19Stats']:
         if k['province'] == pName:
-            data = [(k['city']), k['province'], print(k['country']), k['confirmed'], k['deaths'], k['recovered']]
+            data = [(k['city']), k['province'], (k['country']), k['confirmed'], k['deaths'], k['recovered']]
             dataset.append(data)
             print(dataset)
     return dataset
 
 
 # search by country
-
 @app.route("/countrySearch", methods=['POST'])
 def Home1():
     print(request.method)
@@ -94,7 +94,7 @@ def apiCalls_country(cName):
         print("this is indside api calls")
     return dataset
 
-
+# index page
 @app.route("/")
 def Homepage():
     data1 = unique_city()
@@ -105,7 +105,6 @@ def Homepage():
 
 def unique_city():
     x = rapidAPI()
-
     # check for response status code as 200 then put forward
     dataset = []
     for k in x['data']['covid19Stats']:
@@ -140,4 +139,4 @@ def unique_province():
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8082, debug=True)
+    app.run(host='127.0.0.1', port= 8082, debug=True)
